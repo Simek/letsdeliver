@@ -64,16 +64,11 @@
 				<div class="shadow"></div>
 				<div class="counter counter-analog2" data-format="59:59">15:00</div>
 				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
-				<div class="destinationName">Napoli Pizza</div>
-				<div class="address">Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
-			</div>
-			<div class="address-box">
-				<div class="address">Sopot, Mazowiecka 20</div>
-				<img src="${resource(dir: 'images', file: 'map.png')}" alt="" class="delivery-type">
+				<div class="address"><em>“Napoli Pizza”</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
 			</div>
 			<div class="next-order">
 				<div class="address">Sopot, 3 Maja 102</div>
-				<img src="${resource(dir: 'images', file: 'download.png')}" alt="" class="icon">
+				<img src="${resource(dir: 'images', file: 'deliver.png')}" alt="" class="icon">
 			</div>
 			<div class="menu">
 				<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
