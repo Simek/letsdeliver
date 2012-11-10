@@ -66,6 +66,8 @@ body {
   background: #111;
   position: relative;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0); }
   .mobile #map {
     width: 100%;
@@ -123,7 +125,7 @@ body {
       top: 22px; }
   .mobile .address {
     color: #eee;
-    padding-top: 4px;
+    padding-top: 10px;
     font-size: 1.5em;
     width: 100%;
     text-align: right;
@@ -152,7 +154,7 @@ body {
     background: url(../images/shadow.png) repeat-x; }
   .mobile .menu {
     width: 100%;
-    z-index: 99999999;
+    z-index: 9999;
     bottom: -4px;
     position: absolute; }
     .mobile .menu img {
