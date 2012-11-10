@@ -85,10 +85,16 @@
 
 				$('.counter').counter();
 
-				$('.content').on('swipeleft', function() {
+				$('.content-wrapper').bind('swipeleft', function() {
 
 					$(this).animate({
-						left: '-650px'
+						left: '-100%'
+					})
+				})
+				$('.content-wrapper').bind('swiperight', function() {
+
+					$(this).animate({
+						left: 0
 					})
 				})
 			})
@@ -97,16 +103,28 @@
 	<body>
 		<div id="map"></div>
 		<div class="fullscreen"></div>
-		<div class="content">
-			<div class="current-task">
-				<div class="shadow"></div>
-				<div class="counter counter-analog2" data-format="59:59">15:00</div>
-				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
-				<div class="address"><em>“Anker Pizza”</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<div class="current-task">
+					<div class="shadow"></div>
+					<div class="counter counter-analog2" data-format="59:59">15:00</div>
+					<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
+					<div class="address"><em>Anker Pizza</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
+				</div>
+				<div class="next-order">
+					<div class="address">Gdynia, Aleja Zwycięstwa 96/98</div>
+					<img src="${resource(dir: 'images', file: 'deliver.png')}" alt="" class="icon">
+				</div>
 			</div>
-			<div class="next-order">
-				<div class="address">Gdynia, Aleja Zwycięstwa 96/98</div>
-				<img src="${resource(dir: 'images', file: 'deliver.png')}" alt="" class="icon">
+			<div class="content right">
+				<div class="shadow"></div>
+				<div class="confirmation">
+					<div class="price">$18.90</div>
+					<div class="confirm-button"></div>
+				</div>
+				<div class="info">
+					No knocking!
+				</div>
 			</div>
 		</div>
 		<div class="menu">

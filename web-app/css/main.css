@@ -62,30 +62,39 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important; }
 
-.mobile {
+html, .mobile {
   background: #111;
   position: relative;
   height: 960px;
-  overflow: hidden; }
-  .mobile * {
+  overflow: hidden;
+  max-width: 100%; }
+  html *, .mobile * {
     text-shadow: none !important; }
-  .mobile #map {
+  html #map, .mobile #map {
     width: 100%;
     height: 220px;
     -webkit-transition: all 1s ease;
     -webkit-transform: translate3d(0, 0, 0); }
-    .mobile #map.full {
+    html #map.full, .mobile #map.full {
       height: 960px; }
-    .mobile #map .gmnoprint {
+    html #map .gmnoprint, .mobile #map .gmnoprint {
       display: none; }
-  .mobile .content {
+  html .content-wrapper, .mobile .content-wrapper {
+    position: relative;
+    width: 100%; }
+  html .content, .mobile .content {
     background: -webkit-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
     background: -moz-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
     background: -o-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
     background: linear-gradient(top, #25292c 0%, #1a1d1f 100%);
     border-top: 1px solid #060709;
-    position: relative; }
-  .mobile .fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    html .content.right, .mobile .content.right {
+      left: 100%; }
+  html .fullscreen, .mobile .fullscreen {
     top: 28px;
     right: 12px;
     position: absolute;
@@ -94,7 +103,7 @@ body {
     background: url(../images/fullscreen.png) 100% 100% no-repeat;
     display: block;
     z-index: 99999; }
-  .mobile .current-task {
+  html .current-task, .mobile .current-task {
     width: 100%;
     height: 120px;
     background: -webkit-linear-gradient(top, #121518 0%, #30353a 100%);
@@ -109,7 +118,7 @@ body {
     box-sizing: border-box;
     padding: 4px 16px;
     position: relative; }
-    .mobile .current-task .counter {
+    html .current-task .counter, .mobile .current-task .counter {
       color: #ddd;
       -webkit-transform: translate3d(0, 0, 0);
       -webkit-transform: scale(0.55);
@@ -118,11 +127,11 @@ body {
       width: 100%;
       top: -42px;
       z-index: 99999; }
-    .mobile .current-task .icon {
+    html .current-task .icon, .mobile .current-task .icon {
       position: absolute;
       left: 16px;
       top: 48px; }
-    .mobile .current-task .address {
+    html .current-task .address, .mobile .current-task .address {
       padding: 23px 32px 0 76px;
       font-size: 1.3em;
       line-height: 1.5em;
@@ -135,11 +144,11 @@ body {
       right: 20px;
       position: relative;
       color: #ddd; }
-      .mobile .current-task .address em {
+      html .current-task .address em, .mobile .current-task .address em {
         font-size: 1.4em;
         line-height: 1.7em;
         color: #fafafa; }
-  .mobile .shadow {
+  html .shadow, .mobile .shadow {
     position: absolute;
     top: -20px;
     width: 100%;
@@ -147,23 +156,56 @@ body {
     z-index: 999;
     left: 0;
     background: url(../images/shadow.png) repeat-x; }
-  .mobile .menu {
+  html .menu, .mobile .menu {
     width: 100%;
     position: fixed;
     bottom: -2px;
     z-index: 99999; }
-    .mobile .menu img {
+    html .menu img, .mobile .menu img {
       width: 100%; }
-  .mobile .next-order {
+  html .next-order, .mobile .next-order {
     width: 100%;
     height: 80px;
     position: relative; }
-    .mobile .next-order .address {
+    html .next-order .address, .mobile .next-order .address {
       color: #737d86;
       padding: 24px 32px 0 76px;
       font-size: 1.2em;
       text-align: left; }
-    .mobile .next-order .icon {
+    html .next-order .icon, .mobile .next-order .icon {
       position: absolute;
       left: 16px;
       top: 16px; }
+  html .confirmation, .mobile .confirmation {
+    width: 100%;
+    height: 120px;
+    background: -webkit-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: -moz-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: -o-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: linear-gradient(top, #121518 0%, #30353a 100%);
+    border-top: 1px solid #5f6266;
+    border-bottom: 1px solid #1b1e20;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    position: relative;
+    color: #ddd; }
+    html .confirmation .price, .mobile .confirmation .price {
+      font-size: 5em; }
+    html .confirmation .confirm-button, .mobile .confirmation .confirm-button {
+      position: absolute;
+      right: 20px;
+      top: 26px;
+      width: 53px;
+      height: 53px;
+      background-image: url(../images/pickup.png); }
+  html .info, .mobile .info {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    color: #737d86;
+    padding: 16px 16px;
+    font-size: 1.2em;
+    text-align: left; }
