@@ -40,7 +40,8 @@
 
 					var currentMarker = new google.maps.Marker({
 						position: latlng,
-						map: map
+						map: map,
+						icon: "${resource(dir: 'images', file: 'spot.png')}"
 					});
 
 					var nextRequest = {
