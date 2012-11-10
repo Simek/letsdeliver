@@ -11,8 +11,9 @@
 		<script type="text/javascript">
 			$(function() {
 				function initialize() {
-					var latlng = new google.maps.LatLng(52.217645,21.015966);
+					var latlng = new google.maps.LatLng(54.533833,18.484102);
 					var destLatlng = new google.maps.LatLng(54.509227,18.54041);
+					var nextLatlng = new google.maps.LatLng(54.434683,18.577917)
 							
 					var myOptions = {
 						zoom: 14,
@@ -23,16 +24,35 @@
 							
 					var map = new google.maps.Map(document.getElementById("map"), myOptions);
 							
-					var marker = new google.maps.Marker({
-						position: destLatlng,
-						map: map
-					});
 
 					var directionsService = new google.maps.DirectionsService();
 					var directionsRenderer = new google.maps.DirectionsRenderer({
 						suppressMarkers: true
 					});
+					var nextDirectionRenderer = new google.maps.DirectionsRenderer({
+						suppressMarkers: true,
+						polylineOptions: {
+							strokeColor: '#aad'
+						}
+					})
 					directionsRenderer.setMap(map);
+					nextDirectionRenderer.setMap(map);
+
+					var nextRequest = {
+						 origin: destLatlng,
+						 destination: nextLatlng,
+						 travelMode: google.maps.TravelMode.DRIVING
+					};
+
+					directionsService.route(nextRequest, function(result, status) {
+						if (status == google.maps.DirectionsStatus.OK) {
+							nextDirectionRenderer.setDirections(result);
+							var nextMarker = new google.maps.Marker({
+								position: nextLatlng,
+								map: map
+							});
+						}
+					})
 					var request = {
 						 origin: latlng,
 						 destination: destLatlng,
@@ -41,6 +61,11 @@
 					directionsService.route(request, function(result, status) {
 						if (status == google.maps.DirectionsStatus.OK) {
 							directionsRenderer.setDirections(result);
+
+							var marker = new google.maps.Marker({
+								position: destLatlng,
+								map: map
+							});
 						}
 					})
 				}
