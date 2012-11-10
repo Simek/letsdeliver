@@ -2,16 +2,19 @@
 <html>
 	<head>
 		<meta name="layout" content="mobile"/>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 		<title></title>
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'counter.css')}" type="text/css">
 		<script type="text/javascript">
 			$(function() {
 				function initialize() {
-					latlng = new google.maps.LatLng(52.217645,21.015966);
+					var latlng = new google.maps.LatLng(52.217645,21.015966);
+					var destLatlng = new google.maps.LatLng()
 							
-					myOptions = {
+					var myOptions = {
 						zoom: 14,
 						center: latlng,
 						disableDefaultUI: true,
@@ -24,6 +27,20 @@
 						position: latlng,
 						map: map
 					});
+
+					var directionsService = new google.maps.DirectionsService();
+					var directionsRenderer = new google.maps.DirectionsRenderer();
+					directionsRenderer.setMap(map);
+					var request = {
+						 origin: latlng,
+						 destination: 'Al.Zwycięstwa 96/98, Gdynia',
+						 travelMode: google.maps.TravelMode.DRIVING
+					};
+					directionsService.route(request, function(result, status) {
+						if (status == google.maps.DirectionsStatus.OK) {
+							directionsRenderer.setDirections(result);
+						}
+					})
 				}
 
 				initialize();
