@@ -13,7 +13,7 @@
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body>
+	<body class="${params.controller ?: ''}">
 		<g:layoutBody/>
 
 		<g:javascript library="application"/>
