@@ -101,9 +101,9 @@
 				<div class="address">Gdynia, Aleja Zwycięstwa 96/98</div>
 				<img src="${resource(dir: 'images', file: 'deliver.png')}" alt="" class="icon">
 			</div>
-			<div class="menu">
-				<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
-			</div>
+		</div>
+		<div class="menu">
+			<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
 		</div>
 	</body>
 </html>
