@@ -5,6 +5,6 @@
 		<title></title>
 	</head>
 	<body>
-		<h1>web</h1>
+		<h1>mobile</h1>
 	</body>
 </html>
