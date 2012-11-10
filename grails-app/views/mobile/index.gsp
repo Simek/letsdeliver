@@ -84,6 +84,13 @@
 				})
 
 				$('.counter').counter();
+
+				$('.content').on('swipeleft', function() {
+
+					$(this).animate({
+						left: '-650px'
+					})
+				})
 			})
 		</script>
 	</head>
