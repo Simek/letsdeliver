@@ -89,10 +89,10 @@
 				<div class="shadow"></div>
 				<div class="counter counter-analog2" data-format="59:59">15:00</div>
 				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
-				<div class="address"><em>“Napoli Pizza”</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
+				<div class="address"><em>“Anker Pizza”</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
 			</div>
 			<div class="next-order">
-				<div class="address">Sopot, 3 Maja 102</div>
+				<div class="address">Gdynia, Aleja Zwycięstwa 96/98</div>
 				<img src="${resource(dir: 'images', file: 'deliver.png')}" alt="" class="icon">
 			</div>
 			<div class="menu">
