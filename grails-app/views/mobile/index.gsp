@@ -11,9 +11,9 @@
 		<script type="text/javascript">
 			$(function() {
 				function initialize() {
-					var latlng = new google.maps.LatLng(54.533833,18.484102);
+					var latlng = new google.maps.LatLng(54.509473,18.550059);
 					var destLatlng = new google.maps.LatLng(54.509227,18.54041);
-					var nextLatlng = new google.maps.LatLng(54.434683,18.577917)
+					var nextLatlng = new google.maps.LatLng(54.496652,18.5379687)
 							
 					var myOptions = {
 						zoom: 14,
@@ -37,6 +37,11 @@
 					})
 					directionsRenderer.setMap(map);
 					nextDirectionRenderer.setMap(map);
+
+					var currentMarker = new google.maps.Marker({
+						position: latlng,
+						map: map
+					});
 
 					var nextRequest = {
 						 origin: destLatlng,
