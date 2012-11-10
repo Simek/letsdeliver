@@ -12,7 +12,7 @@
 			$(function() {
 				function initialize() {
 					var latlng = new google.maps.LatLng(52.217645,21.015966);
-					var destLatlng = new google.maps.LatLng()
+					var destLatlng = new google.maps.LatLng(54.509227,18.54041);
 							
 					var myOptions = {
 						zoom: 14,
@@ -24,16 +24,18 @@
 					var map = new google.maps.Map(document.getElementById("map"), myOptions);
 							
 					var marker = new google.maps.Marker({
-						position: latlng,
+						position: destLatlng,
 						map: map
 					});
 
 					var directionsService = new google.maps.DirectionsService();
-					var directionsRenderer = new google.maps.DirectionsRenderer();
+					var directionsRenderer = new google.maps.DirectionsRenderer({
+						suppressMarkers: true
+					});
 					directionsRenderer.setMap(map);
 					var request = {
 						 origin: latlng,
-						 destination: 'Al.Zwycięstwa 96/98, Gdynia',
+						 destination: destLatlng,
 						 travelMode: google.maps.TravelMode.DRIVING
 					};
 					directionsService.route(request, function(result, status) {
