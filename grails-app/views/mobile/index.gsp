@@ -47,6 +47,7 @@
 
 				$(".fullscreen").live("tap", function(){
 					$("#map").toggleClass("full")
+					google.maps.event.trigger(map, 'resize')
 				})
 
 				$('.counter').counter();
