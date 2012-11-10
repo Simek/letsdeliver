@@ -26,6 +26,7 @@
 	.content {
 		@include linearGradient(top, #25292c 0%, #1a1d1f 100%);
 		border-top: 1px solid #060709;
+		position: relative;
 	}
 
 	.fullscreen {

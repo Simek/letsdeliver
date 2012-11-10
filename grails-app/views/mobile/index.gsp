@@ -37,13 +37,11 @@
 					})
 					directionsRenderer.setMap(map);
 					nextDirectionRenderer.setMap(map);
-					var currentIcon = new google.maps.MarkerImage("${resource(dir: 'images', file: 'spot.png')}", null, null,
-						new google.maps.Point(15, 15))
 
 					var currentMarker = new google.maps.Marker({
 						position: latlng,
 						map: map,
-						icon: currentIcon
+						icon: "${resource(dir: 'images', file: 'spot.png')}"
 					});
 
 					var nextRequest = {
