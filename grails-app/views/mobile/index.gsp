@@ -55,9 +55,14 @@
 	</head>
 	<body>
 		<div id="map"></div>
+<<<<<<< HEAD
 		<div class="fullscreen"></div>
 		<div class="current-task">
 			<div class="shadow"></div>
+=======
+		<div class="shadow"></div>
+		<div class="current-task">
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 			<img src="${resource(dir: 'images', file: 'info.png')}" alt="" class="info">
 			<div class="counter counter-analog2" data-format="59:59">15:00</div>
 			<img src="${resource(dir: 'images', file: 'pickup.png')}" alt="" class="done">

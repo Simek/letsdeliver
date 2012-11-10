@@ -163,5 +163,9 @@ pip-log.txt
 .DS_Store
 
 .sass-cache
+<<<<<<< HEAD
 target
 web-app/WEB-INF/
+=======
+target
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3

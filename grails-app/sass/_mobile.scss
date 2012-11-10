@@ -1,16 +1,27 @@
 .mobile {
 	background: #111;
 	position: relative;
+<<<<<<< HEAD
 	height: 100%;
 	-webkit-transform: translate3d(0,0,0);
+=======
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 
 	#map {
 		width: 100%;
 		height: 220px;
+<<<<<<< HEAD
 
 		&.full {
 			height: 1200px;
 			z-index: 99999;
+=======
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transition: height 0.4;
+
+		&.full {
+			height: 960px;
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 		}
 
 		.gmnoprint {
@@ -28,7 +39,11 @@
 		border: 1px solid #999;
 		@include borderRadius(4px);
 		display: block;
+<<<<<<< HEAD
 		z-index: 99999;
+=======
+		z-index: 9999;
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 	}
 
 	.current-task {
@@ -49,7 +64,10 @@
 			left: 16px;
 			width: 100%;
 			top: -42px;
+<<<<<<< HEAD
 			z-index: 99999;
+=======
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 		}
 
 		.done {
@@ -72,8 +90,13 @@
 		width: 100%;
 		text-align: right;
 		right: 20px;
+<<<<<<< HEAD
 
 		position: relative;
+=======
+		top: 6px;
+		position: absolute;
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 	}
 
 	.address-box {
@@ -92,18 +115,31 @@
 
 	.shadow {
 		position: absolute;
+<<<<<<< HEAD
 		top: -20px;
 		width: 100%;
 		height: 20px;
 		z-index: 999;
+=======
+		top: 200px;
+		width: 100%;
+		height: 20px;
+		z-index: 9999;
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 		background: url(../images/shadow.png) repeat-x;
 	}
 
 	.menu {
+<<<<<<< HEAD
 		width: 100%;
 		z-index: 99999999;
 		bottom: -4px;
 		position: absolute;
+=======
+		position: absolute;
+		bottom: 0; 
+		left: 0; 
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 
 		img {
 			width: 100%;
@@ -111,10 +147,18 @@
 	}
 
 	.next-order {
+<<<<<<< HEAD
 		width: 100%;
 		height: 60px;
 		background: #222;
 		position: relative;
+=======
+		position: absolute;
+		top: 362px;
+		width: 100%;
+		height: 48px;
+		background: #222;
+>>>>>>> 79a5f843a5b65e1cdcffb35e435503490135ffd3
 
 		.address {
 			color: #aaa;
