@@ -64,3 +64,51 @@ body {
 
 .mobile {
   background: red; }
+  .mobile #map {
+    width: 100%;
+    height: 220px; }
+    .mobile #map .gmnoprint {
+      display: none; }
+  .mobile .current-task {
+    width: 100%;
+    height: 100px;
+    background: -webkit-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
+    background: -moz-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
+    background: -o-linear-gradient(top, #25292c 0%, #1a1d1f 100%);
+    background: linear-gradient(top, #25292c 0%, #1a1d1f 100%);
+    border-top: 1px solid #5f6266;
+    border-bottom: 1px solid #1b1e20;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px 0 0 16px;
+    position: relative; }
+    .mobile .current-task .counter {
+      color: #ddd;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: scale(0.65);
+      position: absolute;
+      left: -20px; }
+    .mobile .current-task .address {
+      color: #eee;
+      padding-top: 4px;
+      font-size: 1.5em;
+      width: 100%;
+      text-align: right;
+      right: 20px;
+      top: 106px;
+      position: absolute; }
+    .mobile .current-task .done {
+      position: absolute;
+      right: 10px;
+      top: 8px; }
+  .mobile .next-task {
+    width: 100%;
+    height: 40px;
+    background: -webkit-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: -moz-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: -o-linear-gradient(top, #121518 0%, #30353a 100%);
+    background: linear-gradient(top, #121518 0%, #30353a 100%);
+    border-top: 1px solid #30353a;
+    border-bottom: 1px solid #060709; }
