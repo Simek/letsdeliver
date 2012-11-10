@@ -67,10 +67,12 @@ body {
   position: relative;
   height: 960px;
   overflow: hidden; }
+  .mobile * {
+    text-shadow: none !important; }
   .mobile #map {
     width: 100%;
     height: 220px;
-    -webkit-transition: all 1s linear  0;
+    -webkit-transition: all 1s linear 0;
     -webkit-transform: translate3d(0, 0, 0); }
     .mobile #map.full {
       height: 960px; }
@@ -111,11 +113,7 @@ body {
       width: 100%;
       top: -42px;
       z-index: 99999; }
-    .mobile .current-task .done {
-      position: absolute;
-      right: 16px;
-      top: 22px; }
-    .mobile .current-task .info {
+    .mobile .current-task .icon {
       position: absolute;
       left: 16px;
       top: 22px; }

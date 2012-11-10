@@ -63,7 +63,9 @@
 			<div class="current-task">
 				<div class="shadow"></div>
 				<div class="counter counter-analog2" data-format="59:59">15:00</div>
-				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="info">
+				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
+				<div class="destinationName">Napoli Pizza</div>
+				<div class="address">Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
 			</div>
 			<div class="address-box">
 				<div class="address">Sopot, Mazowiecka 20</div>
