@@ -57,22 +57,23 @@
 	<body>
 		<div id="map"></div>
 		<div class="fullscreen"></div>
-		<div class="current-task">
-			<div class="shadow"></div>
-			<img src="${resource(dir: 'images', file: 'info.png')}" alt="" class="info">
-			<div class="counter counter-analog2" data-format="59:59">15:00</div>
-			<img src="${resource(dir: 'images', file: 'pickup.png')}" alt="" class="done">
-		</div>
-		<div class="address-box">
-			<div class="address">Sopot, Mazowiecka 20</div>
-			<img src="${resource(dir: 'images', file: 'map.png')}" alt="" class="delivery-type">
-		</div>
-		<div class="next-order">
-			<div class="address">Sopot, 3 Maja 102</div>
-			<img src="${resource(dir: 'images', file: 'download.png')}" alt="" class="icon">
-		</div>
-		<div class="menu">
-			<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
+		<div class="content">
+			<div class="current-task">
+				<div class="shadow"></div>
+				<div class="counter counter-analog2" data-format="59:59">15:00</div>
+				<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="info">
+			</div>
+			<div class="address-box">
+				<div class="address">Sopot, Mazowiecka 20</div>
+				<img src="${resource(dir: 'images', file: 'map.png')}" alt="" class="delivery-type">
+			</div>
+			<div class="next-order">
+				<div class="address">Sopot, 3 Maja 102</div>
+				<img src="${resource(dir: 'images', file: 'download.png')}" alt="" class="icon">
+			</div>
+			<div class="menu">
+				<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
+			</div>
 		</div>
 	</body>
 </html>
