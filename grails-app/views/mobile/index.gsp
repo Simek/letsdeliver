@@ -112,7 +112,7 @@
 			<div class="content">
 				<div class="current-task">
 					<div class="shadow"></div>
-					<div class="counter counter-analog2" data-format="59:59">15:00</div>
+					<div class="counter counter-analog2" data-format="59:59">${new Random().nextInt(12)+3}:00</div>
 					<img src="${resource(dir: 'images', file: 'deposit.png')}" alt="" class="icon">
 					<div class="address"><em>Anker Pizza</em><br/>Gdynia, Aleja Marszałka Józefa Piłsudskiego 50</div>
 				</div>
