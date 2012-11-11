@@ -99,6 +99,7 @@
 				})
 
 				$('.confirm-button').bind('tap', function() {
+					$('.dimmer').fadeIn('fast')
 					$('.success-popup').fadeIn('fast')
 				})
 			})
@@ -131,11 +132,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="success-popup" style="display: none; position: absolute; left: 20px; top: 240px; width: 600px; background: #000; font-size: 4em;">
-			Success
-		</div>
+		<img src="${resource(dir: 'images', file: 'popup.png')}" alt="" class="success-popup">
 		<div class="menu">
 			<img src="${resource(dir: 'images', file: 'menu.png')}" alt="" class="icon">
 		</div>
+		<div class="dimmer"></div>
 	</body>
 </html>
